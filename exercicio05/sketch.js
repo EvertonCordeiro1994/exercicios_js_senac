@@ -3,18 +3,16 @@ function setup() {
 }
 
 function draw() {
-  let raio = width / 10;
-  let salto = raio ;   
-  let x = raio / 2;
-  let y = raio / 2;
+  let tamanho_da_bolinha = width / 10;
+  let posicaoInicial = tamanho_da_bolinha / 2
 
   background(220);
   fill('#fff005');
 
-  for (let i = salto; i <= width; i += salto) {
-    for (let j = y; j <= height; j += salto) {
-      circle(i-width/20, j, raio)
-      
+  for (let x = posicaoInicial; x <= width; x += tamanho_da_bolinha) {
+    for (let y = posicaoInicial; y <= height; y += tamanho_da_bolinha) {
+      circle(x, y, tamanho_da_bolinha)
+
     }
   }
 }
